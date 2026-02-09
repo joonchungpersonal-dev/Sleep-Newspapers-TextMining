@@ -1,0 +1,5 @@
+"cluster","n_articles","mean_topic_prop","prop_range","mean_year","dominant_source","mean_sentiment"
+1,7,0.4589,"0.394 - 0.573",NA,"No data",NA
+2,12,0.4628,"0.394 - 0.574",NA,"No data",NA
+3,48,0.4783,"0.395 - 0.619",NA,"No data",NA
+4,33,0.4541,"0.389 - 0.711",NA,"No data",NA

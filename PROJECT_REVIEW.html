@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project Review: Sleep in U.S. Print Media</title>
+<style>
+  :root {
+    --bg: #fafafa;
+    --card: #ffffff;
+    --text: #1a1a2e;
+    --muted: #6b7280;
+    --accent: #2563eb;
+    --accent-light: #dbeafe;
+    --green: #059669;
+    --green-light: #d1fae5;
+    --orange: #d97706;
+    --orange-light: #fef3c7;
+    --purple: #7c3aed;
+    --purple-light: #ede9fe;
+    --red: #dc2626;
+    --red-light: #fee2e2;
+    --border: #e5e7eb;
+    --code-bg: #f3f4f6;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    padding: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  h1 { font-size: 2rem; margin-bottom: 0.25rem; }
+  h2 { font-size: 1.4rem; margin: 2rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--accent); color: var(--accent); }
+  h3 { font-size: 1.1rem; margin: 1.25rem 0 0.5rem; }
+  .subtitle { color: var(--muted); font-size: 1rem; margin-bottom: 2rem; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+  }
+  .badge {
+    display: inline-block;
+    padding: 0.2rem 0.7rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .badge-blue { background: var(--accent-light); color: var(--accent); }
+  .badge-green { background: var(--green-light); color: var(--green); }
+  .badge-orange { background: var(--orange-light); color: var(--orange); }
+  .badge-purple { background: var(--purple-light); color: var(--purple); }
+  .badge-red { background: var(--red-light); color: var(--red); }
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .stat-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    text-align: center;
+  }
+  .stat-number { font-size: 2rem; font-weight: 700; color: var(--accent); }
+  .stat-label { font-size: 0.8rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
+  table { width: 100%; border-collapse: collapse; margin: 0.75rem 0; font-size: 0.9rem; }
+  th { background: var(--code-bg); text-align: left; padding: 0.6rem 0.75rem; font-weight: 600; border-bottom: 2px solid var(--border); }
+  td { padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--border); }
+  tr:last-child td { border-bottom: none; }
+  code {
+    background: var(--code-bg);
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-family: 'SF Mono', 'Fira Code', Consolas, monospace;
+  }
+  .tree {
+    background: var(--code-bg);
+    padding: 1.25rem 1.5rem;
+    border-radius: 8px;
+    font-family: 'SF Mono', 'Fira Code', Consolas, monospace;
+    font-size: 0.82rem;
+    line-height: 1.7;
+    overflow-x: auto;
+    white-space: pre;
+  }
+  .highlight { background: #fef08a; padding: 0.1rem 0.3rem; border-radius: 3px; }
+  .checklist { list-style: none; padding: 0; }
+  .checklist li { padding: 0.4rem 0; display: flex; align-items: flex-start; gap: 0.5rem; }
+  .checklist li::before { content: ""; display: inline-block; width: 18px; height: 18px; border: 2px solid var(--border); border-radius: 4px; flex-shrink: 0; margin-top: 3px; }
+  .check-done::before { content: "\2713"; background: var(--green-light); border-color: var(--green); color: var(--green); text-align: center; line-height: 18px; font-size: 12px; font-weight: bold; }
+  .note {
+    background: var(--accent-light);
+    border-left: 4px solid var(--accent);
+    padding: 0.75rem 1rem;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.9rem;
+    margin: 1rem 0;
+  }
+  .warn {
+    background: var(--orange-light);
+    border-left: 4px solid var(--orange);
+    padding: 0.75rem 1rem;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.9rem;
+    margin: 1rem 0;
+  }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  @media (max-width: 700px) { .two-col, .stats-grid { grid-template-columns: 1fr; } }
+  .divider { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.8rem; margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<h1>Discourse around Sleep, Performance, and Work in U.S. Print Media</h1>
+<p class="subtitle">Pre-GitHub Commit Review &mdash; Generated February 7, 2026</p>
+
+<!-- ===== AT A GLANCE ===== -->
+<h2>At a Glance</h2>
+<div class="stats-grid">
+  <div class="stat-card">
+    <div class="stat-number">25,766</div>
+    <div class="stat-label">Newspaper Articles</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-number">35</div>
+    <div class="stat-label">Years (1983&ndash;2017)</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-number">70</div>
+    <div class="stat-label">STM Topics</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-number">7</div>
+    <div class="stat-label">U.S. Newspapers</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-number">3</div>
+    <div class="stat-label">Code Variants</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-number">11,567</div>
+    <div class="stat-label">Total Lines of Code</div>
+  </div>
+</div>
+
+<div class="card">
+  <strong>Project:</strong> Structural Topic Modeling of U.S. newspaper discourse on sleep, examining how cultural frames around sleep, work, health, and productivity have evolved over three decades.<br>
+  <strong>Journal:</strong> Humanities and Social Science Communications (Nature Portfolio) &mdash; <span class="badge badge-orange">Awaiting First Review</span><br>
+  <strong>Data Source:</strong> ProQuest &mdash; NYT, Washington Post, Chicago Tribune, USA Today, WSJ, OC Register, LA Times
+</div>
+
+<!-- ===== MANUSCRIPT ===== -->
+<h2>Manuscript</h2>
+<div class="card">
+  <div class="card-header">
+    <h3>Submitted Version</h3>
+    <span class="badge badge-orange">Under Review</span>
+  </div>
+  <p><code>manuscript/main/DAPR. COMP SOC SCI SLEEP 1983_2017 11_13_2025-2.docx</code></p>
+  <p style="margin-top:0.5rem; color:var(--muted); font-size:0.9rem;">Full title: "Discourse around Sleep, Performance, and Work in the U.S. Print Media: 1983-2017"</p>
+
+  <h3 style="margin-top:1rem;">Key Arguments</h3>
+  <ul style="margin-left:1.25rem; font-size:0.9rem;">
+    <li><strong>Work vs. sleep tension</strong> &mdash; Sleep framed as sacrificed for productivity; exhaustion as "badge of honor"</li>
+    <li><strong>Incomplete customization</strong> &mdash; Sleep reframed as performance enhancer, but napping still stigmatized (70% nap secretly at work)</li>
+    <li><strong>Protestant ethic of sleep</strong> &mdash; Traces ambivalence to Franklin's maxims and Puritan morality</li>
+    <li><strong>Medicalization &amp; healthicization</strong> &mdash; Sleep increasingly framed as health obligation and medical concern</li>
+  </ul>
+
+  <h3 style="margin-top:1rem;">Topics Analyzed in Depth</h3>
+  <table>
+    <tr><th>Topic</th><th>Theme</th><th>Trend (1983&rarr;2017)</th><th>Explanation</th></tr>
+    <tr><td>33</td><td>Sleep, work, functioning (naps)</td><td>2&ndash;3x increase</td><td>Reflects the growing cultural tension between sleep and productivity. Discourse increasingly reframes sleep as a "performance enhancer" rather than an obstacle to work &mdash; but napping remains stigmatized (70% nap secretly at work). Tied to the broader "customization" of sleep in American culture.</td></tr>
+    <tr><td>32</td><td>Health outcomes of poor sleep</td><td>4x increase (strongest)</td><td>Driven by a surge in epidemiological research linking sleep deprivation to diabetes, cardiovascular disease, obesity, and mortality. The medicalization and "healthicization" of sleep &mdash; framing adequate sleep as a civic health obligation &mdash; intensified across the study period.</td></tr>
+    <tr><td>47</td><td>Performance effects</td><td>3&ndash;4x increase</td><td>Growing scientific literature on sleep's role in cognition, memory consolidation, and workplace performance. Media coverage of university and military research on sleep deprivation's impact on decision-making, reaction time, and accident risk increased steadily.</td></tr>
+    <tr><td>50</td><td>War (validation topic)</td><td>Peaks at Iraq Wars</td><td>Does <em>not</em> uniformly increase &mdash; instead shows event-driven peaks coinciding with the 1st Gulf War (1990&ndash;91) and 2nd Iraq War (2003+). Validates the model by capturing real-world events rather than artifactual trends. Articles focus on soldier sleep deprivation and military readiness.</td></tr>
+    <tr><td>7</td><td>School start times (validation)</td><td>Spike 2013&ndash;14</td><td>Coincides with high-profile policy debates, particularly Fairfax County (VA) proposals to delay school start times and the American Academy of Pediatrics' 2014 recommendation that middle and high schools start no earlier than 8:30 AM. Validates the model's sensitivity to real policy events.</td></tr>
+  </table>
+</div>
+
+<div class="card" style="border-left:4px solid var(--muted); opacity:0.75;">
+  <div class="card-header">
+    <h3>Manuscript Files</h3>
+    <span class="badge badge-red">Private &mdash; Not on GitHub</span>
+  </div>
+  <p style="font-size:0.9rem; color:var(--muted);">Manuscript drafts (8 files), supplementary materials (8 files), and sub-analyses (14 files) are kept locally and excluded from the public repository. Contact the corresponding author for manuscript access.</p>
+</div>
+
+<!-- ===== CODE ===== -->
+<h2>Code: Three Variants</h2>
+
+<div class="note">All three code variants implement the same analytical pipeline. Choose based on your audience and use case.</div>
+
+<div class="warn">
+  <strong>Audit Required:</strong> All code variants (R verbose, Python literal, Python optimized) were generated programmatically and require a final manual audit before public release. Key areas to verify:
+  <ul style="margin:0.5rem 0 0 1.25rem; font-size:0.88rem;">
+    <li><strong>R verbose scripts:</strong> Confirm added comments accurately describe the original code logic and that no original code was inadvertently altered</li>
+    <li><strong>Python literal:</strong> Verify STM approximations (FREX, Score, B-spline smoothing) produce comparable results to R output; confirm gensim LDA parameterization matches intent</li>
+    <li><strong>Python optimized:</strong> Validate BERTopic integration, confirm spaCy lemmatization yields equivalent preprocessing to R stemming, test CLI pipeline end-to-end</li>
+    <li><strong>All variants:</strong> Check for hardcoded paths, ensure random seed (8675309) is consistently applied, verify package versions in requirements.txt are compatible</li>
+  </ul>
+</div>
+
+<!-- R Verbose -->
+<div class="card">
+  <div class="card-header">
+    <h3>R &mdash; Verbose Commented <code>code/R_verbose/</code></h3>
+    <span class="badge badge-blue">4,319 lines</span>
+  </div>
+  <p style="font-size:0.9rem; color:var(--muted); margin-bottom:0.75rem;">Your original R code preserved exactly, enhanced with detailed explanations for users less familiar with R. Includes 157 Python cross-references throughout.</p>
+  <table>
+    <tr><th>Script</th><th>Lines</th><th>Purpose</th></tr>
+    <tr><td><code>01_stm_model_estimation.R</code></td><td>855</td><td>STM model fitting, diagnostics, vocabulary pruning</td></tr>
+    <tr><td><code>02_master_stm_analysis.R</code></td><td>1,836</td><td>Full pipeline: preprocessing &rarr; STM &rarr; prevalence &rarr; networks</td></tr>
+    <tr><td><code>03_top_documents_extraction.R</code></td><td>382</td><td>Extract top 25 docs per topic (CSV + TXT)</td></tr>
+    <tr><td><code>04_frame_analysis.R</code></td><td>670</td><td>Media frame detection &amp; temporal trends</td></tr>
+    <tr><td><code>05_word_frequency_visualization.R</code></td><td>576</td><td>Word clouds, frequency plots, distributions</td></tr>
+  </table>
+  <p style="font-size:0.85rem; margin-top:0.5rem;">Each script includes: header block (purpose/inputs/outputs/packages), <code>#### SECTION ####</code> delineation, R syntax explanations, statistical concept definitions, and Python equivalence notes.</p>
+</div>
+
+<!-- Python Literal -->
+<div class="card">
+  <div class="card-header">
+    <h3>Python &mdash; Literal Translation <code>code/python_literal/</code></h3>
+    <span class="badge badge-green">4,721 lines</span>
+  </div>
+  <p style="font-size:0.9rem; color:var(--muted); margin-bottom:0.75rem;">Line-by-line translation mirroring the R structure. Same variable names, same flow, same analytical steps &mdash; but in Python.</p>
+  <table>
+    <tr><th>Script</th><th>Lines</th><th>R &rarr; Python Mapping</th></tr>
+    <tr><td><code>01_stm_model_estimation.py</code></td><td>732</td><td>stm &rarr; gensim LDA</td></tr>
+    <tr><td><code>02_master_stm_analysis.py</code></td><td>1,988</td><td>Full pipeline with documented STM approximations</td></tr>
+    <tr><td><code>03_top_documents_extraction.py</code></td><td>390</td><td>findThoughts &rarr; pandas top-N</td></tr>
+    <tr><td><code>04_frame_analysis.py</code></td><td>826</td><td>stringr &rarr; regex, corrplot &rarr; seaborn</td></tr>
+    <tr><td><code>05_word_frequency_visualization.py</code></td><td>785</td><td>ggwordcloud &rarr; wordcloud, ggplot2 &rarr; matplotlib</td></tr>
+  </table>
+  <div class="warn">
+    <strong>Note:</strong> R's <code>stm</code> package (prevalence covariates, B-spline smoothing, FREX/Score/Lift rankings) has no exact Python equivalent. These are approximated using gensim LDA + custom implementations. All approximations are documented inline.
+  </div>
+</div>
+
+<!-- Python Optimized -->
+<div class="card">
+  <div class="card-header">
+    <h3>Python &mdash; Modern/Optimized <code>code/python_optimized/</code></h3>
+    <span class="badge badge-purple">2,527 lines</span>
+  </div>
+  <p style="font-size:0.9rem; color:var(--muted); margin-bottom:0.75rem;">Creative reimagining using modern Python best practices. 59% fewer lines, full type hints, CLI pipeline, and interactive visualizations.</p>
+  <table>
+    <tr><th>Module</th><th>Lines</th><th>Role</th></tr>
+    <tr><td><code>config.py</code></td><td>201</td><td>Centralized config via frozen dataclasses</td></tr>
+    <tr><td><code>preprocessing.py</code></td><td>225</td><td>spaCy lemmatization + sparse DTM construction</td></tr>
+    <tr><td><code>topic_modeling.py</code></td><td>400</td><td>gensim LDA + BERTopic (transformer-based)</td></tr>
+    <tr><td><code>frame_analysis.py</code></td><td>308</td><td>Compiled regex scoring + OLS trends</td></tr>
+    <tr><td><code>network_analysis.py</code></td><td>283</td><td>Sparse scipy co-occurrence + NetworkX</td></tr>
+    <tr><td><code>visualization.py</code></td><td>698</td><td>matplotlib + plotly interactive HTML export</td></tr>
+    <tr><td><code>pipeline.py</code></td><td>394</td><td>CLI: <code>python pipeline.py --data corpus.csv --steps all</code></td></tr>
+  </table>
+  <p style="font-size:0.85rem; margin-top:0.5rem;"><strong>Key upgrades:</strong> BERTopic as modern alternative to LDA, spaCy lemmas instead of stems, sparse matrix ops for networks, plotly interactive charts, single CLI entry point.</p>
+</div>
+
+<!-- Comparison Table -->
+<div class="card">
+  <h3>Code Variant Comparison</h3>
+  <table>
+    <tr><th>Aspect</th><th>R Verbose</th><th>Python Literal</th><th>Python Optimized</th></tr>
+    <tr><td>Total lines</td><td>4,319</td><td>4,721</td><td>2,527</td></tr>
+    <tr><td>Files</td><td>5</td><td>5 + requirements</td><td>8 + requirements</td></tr>
+    <tr><td>Topic model</td><td>STM (native)</td><td>gensim LDA (approximation)</td><td>gensim LDA + BERTopic</td></tr>
+    <tr><td>NLP</td><td>Stemming</td><td>Stemming (mirrored)</td><td>spaCy lemmatization</td></tr>
+    <tr><td>Plots</td><td>ggplot2 (static)</td><td>matplotlib (static)</td><td>matplotlib + plotly</td></tr>
+    <tr><td>Type safety</td><td>None</td><td>Basic hints</td><td>Full type hints</td></tr>
+    <tr><td>Config</td><td>Inline constants</td><td>Inline constants</td><td>Centralized dataclasses</td></tr>
+    <tr><td>Best for</td><td>R users, reproducibility</td><td>Python users wanting 1:1 mapping</td><td>Modern projects, reuse</td></tr>
+  </table>
+</div>
+
+<!-- ===== FOLDER STRUCTURE ===== -->
+<h2>Repository Structure</h2>
+<div class="tree">Sleep-Newspapers-TextMining/
+&#9500;&#9472;&#9472; .gitignore
+&#9500;&#9472;&#9472; README.md
+&#9500;&#9472;&#9472; PROJECT_REVIEW.html          <span class="highlight">&larr; this file</span>
+&#9474;
+&#9500;&#9472;&#9472; code/
+&#9474;   &#9500;&#9472;&#9472; original_R/                 6 original scripts (230 KB)
+&#9474;   &#9500;&#9472;&#9472; R_verbose/                  5 verbose scripts (178 KB)
+&#9474;   &#9500;&#9472;&#9472; python_literal/             5 scripts + requirements (162 KB)
+&#9474;   &#9500;&#9472;&#9472; python_optimized/           8 modules + requirements (80 KB)
+&#9474;   &#9492;&#9472;&#9472; Social Construction of Sleep US Media.Rproj
+&#9474;
+&#9500;&#9472;&#9472; data/
+&#9474;   &#9500;&#9472;&#9472; processed/                  4 R workspace snapshots (2.3 GB) <span style="color:var(--red);">[gitignored]</span>
+&#9474;   &#9492;&#9472;&#9472; metadata/                   16 CSV/TXT files (topic terms, labels)
+&#9474;
+&#9500;&#9472;&#9472; manuscript/                         <span style="color:var(--red);">[private &mdash; gitignored]</span>
+&#9474;   &#9500;&#9472;&#9472; main/                       8 files (DAPR submitted + drafts)
+&#9474;   &#9500;&#9472;&#9472; supplementary/              8 files (cover letter, CRediT, etc.)
+&#9474;   &#9492;&#9472;&#9472; sub_analyses/
+&#9474;       &#9500;&#9472;&#9472; sleep_and_health/       1 file (Chung &amp; Moloney)
+&#9474;       &#9492;&#9472;&#9472; sleep_and_work/         13 files (PNAS template + drafts)
+&#9474;
+&#9500;&#9472;&#9472; output/
+&#9474;   &#9500;&#9472;&#9472; figures/
+&#9474;   &#9474;   &#9500;&#9472;&#9472; topic_trends/           80 topic proportion plots
+&#9474;   &#9474;   &#9500;&#9472;&#9472; word_clouds/            10 word cloud PNGs
+&#9474;   &#9474;   &#9500;&#9472;&#9472; network_analysis/       42 network/centrality figures
+&#9474;   &#9474;   &#9500;&#9472;&#9472; stm_networks/           1,442 network visualizations
+&#9474;   &#9474;   &#9500;&#9472;&#9472; final/                  18 curated pub-ready outputs
+&#9474;   &#9474;   &#9492;&#9472;&#9472; sub_analyses/           20 figures from spin-off papers
+&#9474;   &#9500;&#9472;&#9472; tables/
+&#9474;   &#9474;   &#9500;&#9472;&#9472; frame_analysis/         19 frame statistics/trends
+&#9474;   &#9474;   &#9500;&#9472;&#9472; all_topics_documents/   142 per-topic doc files
+&#9474;   &#9474;   &#9500;&#9472;&#9472; top_articles_by_topic/  26 top-article text files
+&#9474;   &#9474;   &#9492;&#9472;&#9472; (28 result CSVs)
+&#9474;   &#9492;&#9472;&#9472; models/                     8 STM output files <span style="color:var(--red);">[gitignored]</span>
+&#9474;
+&#9500;&#9472;&#9472; references/                         (empty &mdash; add key papers)
+&#9492;&#9472;&#9472; Social Construction of Sleep...     (original folder, preserved)</div>
+
+<!-- ===== GITIGNORE ===== -->
+<h2>What Gets Committed vs. Gitignored</h2>
+<div class="two-col">
+  <div class="card" style="border-left:4px solid var(--green);">
+    <h3 style="color:var(--green);">Tracked on GitHub</h3>
+    <ul style="margin-left:1.25rem; font-size:0.9rem;">
+      <li>All code (R, Python literal, Python optimized)</li>
+      <li><code>data/metadata/</code> &mdash; topic terms, labels (small CSVs)</li>
+      <li><code>output/figures/</code> &mdash; all publication figures</li>
+      <li><code>output/tables/</code> &mdash; frame analysis, article extracts</li>
+      <li><del><code>manuscript/</code></del> &mdash; <strong>private</strong> (not tracked)</li>
+      <li><code>README.md</code>, <code>.gitignore</code></li>
+    </ul>
+  </div>
+  <div class="card" style="border-left:4px solid var(--red);">
+    <h3 style="color:var(--red);">Gitignored (too large / sensitive)</h3>
+    <ul style="margin-left:1.25rem; font-size:0.9rem;">
+      <li><code>data/raw/</code> &mdash; original ProQuest downloads</li>
+      <li><code>data/processed/</code> &mdash; R workspace snapshots (2.3 GB)</li>
+      <li><code>output/models/</code> &mdash; saved model objects</li>
+      <li><code>.RData</code>, <code>.Rhistory</code>, <code>.Rproj.user/</code></li>
+      <li><code>__pycache__/</code>, <code>.venv/</code></li>
+      <li><code>.DS_Store</code></li>
+    </ul>
+  </div>
+</div>
+
+<!-- ===== DATA SUMMARY ===== -->
+<h2>Data &amp; Methodology</h2>
+<div class="card">
+  <table>
+    <tr><th style="width:180px;">Parameter</th><th>Value</th></tr>
+    <tr><td>Source</td><td>ProQuest newspaper database</td></tr>
+    <tr><td>Search</td><td>"sleep" in title or abstract</td></tr>
+    <tr><td>Date range</td><td>January 1, 1983 &ndash; December 31, 2017</td></tr>
+    <tr><td>Initial results</td><td>36,452 documents</td></tr>
+    <tr><td>After dedup</td><td>25,766 articles (cosine similarity threshold 0.7)</td></tr>
+    <tr><td>Newspapers (7)</td><td>NYT, Washington Post, Chicago Tribune, USA Today, WSJ, OC Register, LA Times</td></tr>
+    <tr><td>Model</td><td>Structural Topic Model (STM), k=70</td></tr>
+    <tr><td>Prevalence covariate</td><td>Year (B-spline smoothed)</td></tr>
+    <tr><td>Random seed</td><td>8675309</td></tr>
+    <tr><td>Software</td><td>R 4.4.1 (stm, tidyverse, quanteda, igraph, ggplot2)</td></tr>
+    <tr><td>Preprocessing</td><td>Stop words, lowercase, stemming, min doc freq = 500</td></tr>
+  </table>
+</div>
+
+<!-- ===== FRAME ANALYSIS ===== -->
+<h2>Frame Analysis Summary</h2>
+<div class="card">
+  <p style="font-size:0.9rem; color:var(--muted); margin-bottom:0.75rem;">Eight media frames were analyzed across the full 25,766-article corpus:</p>
+  <table>
+    <tr><th>Frame</th><th>Prevalence</th><th style="width:50%;">Visual</th></tr>
+    <tr><td>Moral</td><td>81.9%</td><td><div style="background:var(--accent); height:16px; border-radius:3px; width:81.9%;"></div></td></tr>
+    <tr><td>Technology</td><td>76.8%</td><td><div style="background:var(--accent); height:16px; border-radius:3px; width:76.8%;"></div></td></tr>
+    <tr><td>Lifestyle</td><td>70.8%</td><td><div style="background:var(--accent); height:16px; border-radius:3px; width:70.8%;"></div></td></tr>
+    <tr><td>Economic</td><td>68.9%</td><td><div style="background:var(--accent); height:16px; border-radius:3px; width:68.9%;"></div></td></tr>
+    <tr><td>Productivity</td><td>63.5%</td><td><div style="background:var(--accent); height:16px; border-radius:3px; width:63.5%;"></div></td></tr>
+    <tr><td>Social</td><td>59.4%</td><td><div style="background:var(--accent); height:16px; border-radius:3px; width:59.4%;"></div></td></tr>
+    <tr><td>Health</td><td>56.9%</td><td><div style="background:var(--accent); height:16px; border-radius:3px; width:56.9%;"></div></td></tr>
+    <tr><td>Scientific</td><td>47.2%</td><td><div style="background:var(--accent); height:16px; border-radius:3px; width:47.2%;"></div></td></tr>
+  </table>
+</div>
+
+
+<!-- ===== DISK USAGE ===== -->
+<h2>Disk Usage</h2>
+<div class="card">
+  <table>
+    <tr><th>Directory</th><th>Size</th><th>GitHub?</th></tr>
+    <tr><td><code>code/</code></td><td>976 KB</td><td><span class="badge badge-green">Yes</span></td></tr>
+    <tr><td><code>data/metadata/</code></td><td>~200 KB</td><td><span class="badge badge-green">Yes</span></td></tr>
+    <tr><td><code>data/processed/</code></td><td>2.3 GB</td><td><span class="badge badge-red">Gitignored</span></td></tr>
+    <tr><td><code>manuscript/</code></td><td>28 MB</td><td><span class="badge badge-red">Private</span></td></tr>
+    <tr><td><code>output/figures/</code></td><td>~1.2 GB</td><td><span class="badge badge-orange">Partial?</span></td></tr>
+    <tr><td><code>output/tables/</code></td><td>~50 MB</td><td><span class="badge badge-green">Yes</span></td></tr>
+    <tr><td><code>output/models/</code></td><td>~15 MB</td><td><span class="badge badge-red">Gitignored</span></td></tr>
+  </table>
+  <p style="font-size:0.85rem; color:var(--muted); margin-top:0.5rem;">GitHub recommends repos under 1 GB. With <code>data/processed/</code> and <code>output/models/</code> gitignored, the tracked content is well under this limit &mdash; unless all 1,442 STM network files are included.</p>
+</div>
+
+<hr class="divider">
+
+<div class="footer">
+  Generated by Claude Code &bull; February 7, 2026<br>
+  Working copy: <code>~/Desktop/Elements Claude Test - Working Copy/Sleep-Newspapers-TextMining/</code>
+</div>
+
+</body>
+</html>

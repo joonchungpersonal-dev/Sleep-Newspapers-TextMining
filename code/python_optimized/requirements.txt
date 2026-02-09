@@ -1,0 +1,39 @@
+# =============================================================================
+# Sleep-Newspapers Text Mining -- Python Dependencies
+# =============================================================================
+# Install: pip install -r requirements.txt
+#
+# For GPU-accelerated BERTopic (optional):
+#   pip install torch --index-url https://download.pytorch.org/whl/cu121
+#
+# For the spaCy language model:
+#   python -m spacy download en_core_web_sm
+# =============================================================================
+
+# --- Core data science ---
+numpy>=1.24
+pandas>=2.0
+scipy>=1.10
+
+# --- NLP & Text ---
+spacy>=3.6
+scikit-learn>=1.3
+
+# --- Topic modelling ---
+gensim>=4.3                # Classical LDA
+bertopic>=0.16             # Neural topic modelling (optional but recommended)
+sentence-transformers>=2.2 # Embedding backend for BERTopic
+umap-learn>=0.5            # Dimensionality reduction for BERTopic
+hdbscan>=0.8               # Clustering for BERTopic
+
+# --- Network analysis ---
+networkx>=3.1
+
+# --- Visualization ---
+matplotlib>=3.7
+wordcloud>=1.9
+plotly>=5.15
+kaleido>=0.2               # Plotly static image export
+
+# --- Utilities ---
+tqdm>=4.65

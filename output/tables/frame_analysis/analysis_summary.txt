@@ -1,0 +1,15 @@
+FULL CORPUS FRAME ANALYSIS SUMMARY
+================================================== 
+
+Analysis Date: 20252 
+Total Articles Analyzed: 25766 
+Time Range: 1983 - 2017 
+Frames Analyzed: 8 
+Total Frame Terms: 232 
+
+Most Prevalent Frame: health ( 56.87 % of articles)
+Least Prevalent Frame: social ( 59.41 % of articles)
+
+Significant Temporal Trends: 6 out of 8 frames
+
+Analysis completed successfully!

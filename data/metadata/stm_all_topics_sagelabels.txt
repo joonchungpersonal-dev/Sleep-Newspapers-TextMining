@@ -1,0 +1,280 @@
+Topic 1:
+ 	 Marginal Highest Prob: sleep, disord, apnea, peopl, medic
+ 	 Marginal Score: apnea, disord, insomnia, sleep, patient
+
+Topic 2:
+ 	 Marginal Highest Prob: game, hit, run, pitch, basebal
+ 	 Marginal Score: inning, game, pitcher, basebal, pitch
+
+Topic 3:
+ 	 Marginal Highest Prob: will, saturday, friday, sunday, church
+ 	 Marginal Score: funer, church, saturday, sunday, friday
+
+Topic 4:
+ 	 Marginal Highest Prob: homeless, shelter, peopl, servic, help
+ 	 Marginal Score: homeless, shelter, volunt, church, servic
+
+Topic 5:
+ 	 Marginal Highest Prob: store, mattress, bed, shop, buy
+ 	 Marginal Score: mattress, store, bed, retail, shop
+
+Topic 6:
+ 	 Marginal Highest Prob: anim, cat, human, adopt, bear
+ 	 Marginal Score: cat, anim, adopt, fox, human
+
+Topic 7:
+ 	 Marginal Highest Prob: school, high, teacher, student, start
+ 	 Marginal Score: elementari, school, student, teacher, teen
+
+Topic 8:
+ 	 Marginal Highest Prob: counti, jail, prison, sheriff, offici
+ 	 Marginal Score: jail, counti, prison, sheriff, supervisor
+
+Topic 9:
+ 	 Marginal Highest Prob: babi, infant, parent, mother, birth
+ 	 Marginal Score: infant, babi, parent, birth, pediatr
+
+Topic 10:
+ 	 Marginal Highest Prob: hotel, room, guest, inn, rate
+ 	 Marginal Score: inn, hotel, guest, room, lodg
+
+Topic 11:
+ 	 Marginal Highest Prob: room, can, design, use, space
+ 	 Marginal Score: pillow, room, space, design, bedroom
+
+Topic 12:
+ 	 Marginal Highest Prob: game, point, play, said, score
+ 	 Marginal Score: rebound, game, playoff, victori, score
+
+Topic 13:
+ 	 Marginal Highest Prob: flight, travel, airport, plane, airlin
+ 	 Marginal Score: airlin, flight, airport, plane, passeng
+
+Topic 14:
+ 	 Marginal Highest Prob: michael, brown, jackson, told, gari
+ 	 Marginal Score: jackson, michael, brown, vega, las
+
+Topic 15:
+ 	 Marginal Highest Prob: dream, life, one, mind, peopl
+ 	 Marginal Score: dream, nightmar, memori, emot, mind
+
+Topic 16:
+ 	 Marginal Highest Prob: music, song, band, perform, danc
+ 	 Marginal Score: album, music, song, band, danc
+
+Topic 17:
+ 	 Marginal Highest Prob: park, camp, summer, tent, day
+ 	 Marginal Score: camp, park, tent, summer, cabin
+
+Topic 18:
+ 	 Marginal Highest Prob: dog, pet, owner, home, put
+ 	 Marginal Score: dog, pet, owner, rescu, anim
+
+Topic 19:
+ 	 Marginal Highest Prob: drink, alcohol, smoke, coffe, can
+ 	 Marginal Score: caffein, drink, alcohol, smoke, coffe
+
+Topic 20:
+ 	 Marginal Highest Prob: presid, campaign, democrat, clinton, vote
+ 	 Marginal Score: clinton, democrat, republican, senat, campaign
+
+Topic 21:
+ 	 Marginal Highest Prob: money, fund, stock, year, market
+ 	 Marginal Score: stock, fund, invest, market, tax
+
+Topic 22:
+ 	 Marginal Highest Prob: king, goal, wilson, ice, brian
+ 	 Marginal Score: duck, king, wilson, goal, ice
+
+Topic 23:
+ 	 Marginal Highest Prob: street, black, peopl, man, block
+ 	 Marginal Score: gang, street, neighborhood, black, gun
+
+Topic 24:
+ 	 Marginal Highest Prob: show, news, call, will, phone
+ 	 Marginal Score: chart, comput, internet, network, onlin
+
+Topic 25:
+ 	 Marginal Highest Prob: won, world, win, sport, olymp
+ 	 Marginal Score: olymp, won, win, championship, athlet
+
+Topic 26:
+ 	 Marginal Highest Prob: love, will, friend, husband, dear
+ 	 Marginal Score: dear, love, husband, marri, marriag
+
+Topic 27:
+ 	 Marginal Highest Prob: drug, use, medic, effect, treatment
+ 	 Marginal Score: prescrib, drug, pill, patient, medic
+
+Topic 28:
+ 	 Marginal Highest Prob: photo, illustr, caption, chicago, color
+ 	 Marginal Score: text, photo, caption, illustr, chicago
+
+Topic 29:
+ 	 Marginal Highest Prob: film, movi, play, star, show
+ 	 Marginal Score: film, movi, actor, comedi, theater
+
+Topic 30:
+ 	 Marginal Highest Prob: hous, home, fire, live, apart
+ 	 Marginal Score: fire, hous, apart, home, build
+
+Topic 31:
+ 	 Marginal Highest Prob: island, water, boat, river, fish
+ 	 Marginal Score: boat, island, fish, sea, river
+
+Topic 32:
+ 	 Marginal Highest Prob: percent, studi, risk, health, report
+ 	 Marginal Score: diabet, percent, studi, health, diseas
+
+Topic 33:
+ 	 Marginal Highest Prob: sleep, hour, get, day, time
+ 	 Marginal Score: nap, hour, sleep, depriv, sleepi
+
+Topic 34:
+ 	 Marginal Highest Prob: case, death, charg, kill, investig
+ 	 Marginal Score: juri, prosecutor, murder, testifi, attorney
+
+Topic 35:
+ 	 Marginal Highest Prob: race, run, ride, hors, mile
+ 	 Marginal Score: hors, race, ride, bike, mile
+
+Topic 36:
+ 	 Marginal Highest Prob: govern, nation, will, polit, countri
+ 	 Marginal Score: reagan, govern, polit, minist, nation
+
+Topic 37:
+ 	 Marginal Highest Prob: can, may, problem, pain, depress
+ 	 Marginal Score: headach, symptom, depress, pain, stress
+
+Topic 38:
+ 	 Marginal Highest Prob: travel, trip, tour, includ, cruis
+ 	 Marginal Score: cruis, tour, travel, trip, tourist
+
+Topic 39:
+ 	 Marginal Highest Prob: john, washington, william, robert, georg
+ 	 Marginal Score: kennedi, william, john, washington, johnson
+
+Topic 40:
+ 	 Marginal Highest Prob: team, player, coach, season, play
+ 	 Marginal Score: quarterback, coach, player, team, game
+
+Topic 41:
+ 	 Marginal Highest Prob: american, countri, cultur, world, state
+ 	 Marginal Score: spanish, immigr, american, cultur, japanes
+
+Topic 42:
+ 	 Marginal Highest Prob: train, worker, work, union, crew
+ 	 Marginal Score: pilot, worker, crew, train, union
+
+Topic 43:
+ 	 Marginal Highest Prob: student, colleg, univers, program, class
+ 	 Marginal Score: campus, student, colleg, program, class
+
+Topic 44:
+ 	 Marginal Highest Prob: car, drive, driver, road, truck
+ 	 Marginal Score: driver, car, truck, drive, bus
+
+Topic 45:
+ 	 Marginal Highest Prob: one, back, look, day, hand
+ 	 Marginal Score: bird, man, walk, smile, back
+
+Topic 46:
+ 	 Marginal Highest Prob: children, parent, child, kid, famili
+ 	 Marginal Score: foster, children, parent, child, kid
+
+Topic 47:
+ 	 Marginal Highest Prob: research, studi, brain, univers, test
+ 	 Marginal Score: hormon, research, brain, studi, scientist
+
+Topic 48:
+ 	 Marginal Highest Prob: new, york, art, street, center
+ 	 Marginal Score: galleri, museum, art, york, street
+
+Topic 49:
+ 	 Marginal Highest Prob: night, sleep, bed, get, wake
+ 	 Marginal Score: sleeper, bed, night, sleep, bedtim
+
+Topic 50:
+ 	 Marginal Highest Prob: war, bush, militari, armi, forc
+ 	 Marginal Score: bush, war, militari, soldier, armi
+
+Topic 51:
+ 	 Marginal Highest Prob: say, peopl, get, today, work
+ 	 Marginal Score: usa, say, add, peopl, shes
+
+Topic 52:
+ 	 Marginal Highest Prob: citi, resid, new, council, will
+ 	 Marginal Score: council, citi, mayor, resid, offici
+
+Topic 53:
+ 	 Marginal Highest Prob: food, eat, cook, restaur, dinner
+ 	 Marginal Score: wine, food, restaur, cook, dinner
+
+Topic 54:
+ 	 Marginal Highest Prob: hospit, medic, patient, doctor, care
+ 	 Marginal Score: cancer, patient, hospit, medic, doctor
+
+Topic 55:
+ 	 Marginal Highest Prob: get, like, just, dont, think
+ 	 Marginal Score: bat, hes, think, dont, guy
+
+Topic 56:
+ 	 Marginal Highest Prob: light, time, day, clock, morn
+ 	 Marginal Score: clock, light, rhythm, shift, alarm
+
+Topic 57:
+ 	 Marginal Highest Prob: angel, los, san, time, california
+ 	 Marginal Score: seal, angel, los, san, california
+
+Topic 58:
+ 	 Marginal Highest Prob: water, plant, cold, farm, winter
+ 	 Marginal Score: plant, farm, water, tree, temperatur
+
+Topic 59:
+ 	 Marginal Highest Prob: counti, orang, santa, beach, regist
+ 	 Marginal Score: ana, counti, orang, santa, beach
+
+Topic 60:
+ 	 Marginal Highest Prob: breath, nois, surgeri, snore, sound
+ 	 Marginal Score: snore, surgeri, breath, nois, devic
+
+Topic 61:
+ 	 Marginal Highest Prob: compani, million, busi, year, new
+ 	 Marginal Score: revenu, compani, million, industri, busi
+
+Topic 62:
+ 	 Marginal Highest Prob: club, play, round, open, green
+ 	 Marginal Score: golf, tournament, club, player, round
+
+Topic 63:
+ 	 Marginal Highest Prob: women, men, woman, sex, male
+ 	 Marginal Score: era, women, men, woman, sex
+
+Topic 64:
+ 	 Marginal Highest Prob: mark, miller, grant, howard, allen
+ 	 Marginal Score: miller, allen, howard, larri, tim
+
+Topic 65:
+ 	 Marginal Highest Prob: book, write, stori, one, read
+ 	 Marginal Score: novel, book, write, fiction, stori
+
+Topic 66:
+ 	 Marginal Highest Prob: famili, year, father, mother, son
+ 	 Marginal Score: mrs, father, mother, son, famili
+
+Topic 67:
+ 	 Marginal Highest Prob: law, state, court, rule, legal
+ 	 Marginal Score: suprem, law, court, legal, lawyer
+
+Topic 68:
+ 	 Marginal Highest Prob: exercis, can, bodi, weight, eat
+ 	 Marginal Score: exercis, weight, diet, bodi, fat
+
+Topic 69:
+ 	 Marginal Highest Prob: said, polic, offic, report, two
+ 	 Marginal Score: polic, said, yesterday, offic, offici
+
+Topic 70:
+ 	 Marginal Highest Prob: smith, stephen, carolina, one, time
+ 	 Marginal Score: smith, stephen, carolina, north, miss
+

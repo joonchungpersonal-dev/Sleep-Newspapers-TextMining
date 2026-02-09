@@ -1,0 +1,31 @@
+# Large data files (too large for GitHub)
+data/raw/
+data/processed/
+
+# Model objects
+output/models/
+
+# Manuscript files (private — under review)
+manuscript/
+
+# Network analysis figures (excluded from public repo)
+output/figures/network_analysis/
+output/figures/stm_networks/
+
+# Original source folder (reorganized into code/data/output/)
+Social Construction of Sleep Health and Medicine US Media/
+
+# R workspace
+.RData
+.Rhistory
+.Rproj.user/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS files
+.DS_Store
+Thumbs.db

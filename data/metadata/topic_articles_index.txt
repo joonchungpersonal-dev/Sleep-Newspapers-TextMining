@@ -1,0 +1,27 @@
+INDEX OF TOPIC ARTICLE FILES
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =  
+
+This directory contains the top 50 articles for each selected topic:
+
+Topic 1 ( A ): topic_1_A_top50.txt 
+Topic 5 ( E ): topic_5_E_top50.txt 
+Topic 7 ( G ): topic_7_G_top50.txt 
+Topic 9 ( I ): topic_9_I_top50.txt 
+Topic 11 ( K ): topic_11_K_top50.txt 
+Topic 27 ( AA ): topic_27_AA_top50.txt 
+Topic 32 ( FF ): topic_32_FF_top50.txt 
+Topic 33 ( GG ): topic_33_GG_top50.txt 
+Topic 37 ( KK ): topic_37_KK_top50.txt 
+Topic 46 ( TT ): topic_46_TT_top50.txt 
+Topic 47 ( UU ): topic_47_UU_top50.txt 
+Topic 49 ( WW ): topic_49_WW_top50.txt 
+Topic 50 ( XX ): topic_50_XX_top50.txt 
+Topic 51 ( YY ): topic_51_YY_top50.txt 
+Topic 56 ( DDD ): topic_56_DDD_top50.txt 
+Topic 61 ( III ): topic_61_III_top50.txt 
+Topic 60 ( HHH ): topic_60_HHH_top50.txt 
+Topic 68 ( PPP ): topic_68_PPP_top50.txt 
+Topic 54 ( BBB ): topic_54_BBB_top50.txt 
+
+Total files created: 19 
+Total articles extracted: 950 

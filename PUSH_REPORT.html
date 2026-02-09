@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub Push Report</title>
+<style>
+  :root {
+    --bg: #f8fafc; --card: #fff; --text: #1e293b; --muted: #64748b;
+    --green: #16a34a; --green-bg: #dcfce7; --green-border: #86efac;
+    --red: #dc2626; --red-bg: #fee2e2; --red-border: #fca5a5;
+    --amber: #d97706; --amber-bg: #fef3c7; --amber-border: #fcd34d;
+    --blue: #2563eb; --blue-bg: #dbeafe;
+    --border: #e2e8f0; --code-bg: #f1f5f9;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.6;
+    padding: 2.5rem; max-width: 960px; margin: 0 auto;
+  }
+  h1 { font-size: 1.75rem; margin-bottom: 0.25rem; }
+  .subtitle { color: var(--muted); margin-bottom: 2rem; }
+  h2 { font-size: 1.25rem; margin: 2.5rem 0 1rem; padding-bottom: 0.4rem; border-bottom: 2px solid var(--blue); color: var(--blue); }
+  .card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+    padding: 1.25rem 1.5rem; margin-bottom: 0.75rem;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+  }
+  .card-green { border-left: 4px solid var(--green); }
+  .card-red { border-left: 4px solid var(--red); }
+  .card-amber { border-left: 4px solid var(--amber); }
+  .badge {
+    display: inline-block; padding: 0.15rem 0.6rem; border-radius: 999px;
+    font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;
+  }
+  .b-green { background: var(--green-bg); color: var(--green); }
+  .b-red { background: var(--red-bg); color: var(--red); }
+  .b-amber { background: var(--amber-bg); color: var(--amber); }
+  table { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin: 0.5rem 0; }
+  th { background: var(--code-bg); text-align: left; padding: 0.5rem 0.75rem; font-weight: 600; border-bottom: 2px solid var(--border); }
+  td { padding: 0.45rem 0.75rem; border-bottom: 1px solid var(--border); }
+  tr:last-child td { border-bottom: none; }
+  code { background: var(--code-bg); padding: 0.12rem 0.35rem; border-radius: 4px; font-size: 0.82rem; font-family: 'SF Mono', Consolas, monospace; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  .size { color: var(--muted); font-size: 0.8rem; }
+  .bar-track { background: var(--code-bg); border-radius: 6px; height: 20px; overflow: hidden; margin: 0.75rem 0; }
+  .bar-fill-green { background: var(--green); height: 100%; border-radius: 6px 0 0 6px; display: inline-block; }
+  .bar-fill-red { background: var(--red); height: 100%; display: inline-block; }
+  .bar-fill-amber { background: var(--amber); height: 100%; display: inline-block; }
+  .legend { display: flex; gap: 1.5rem; font-size: 0.8rem; color: var(--muted); margin-top: 0.25rem; }
+  .legend span::before { content: ""; display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 4px; vertical-align: middle; }
+  .leg-green::before { background: var(--green); }
+  .leg-red::before { background: var(--red); }
+  .leg-amber::before { background: var(--amber); }
+  .summary-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin-bottom: 1.5rem; }
+  .summary-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1rem; text-align: center; }
+  .summary-num { font-size: 1.8rem; font-weight: 700; }
+  .summary-label { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+  .footer { text-align: center; color: var(--muted); font-size: 0.78rem; margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+  @media (max-width: 700px) { .two-col, .summary-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<h1>GitHub Push Report</h1>
+<p class="subtitle">What gets published vs. what stays private &mdash; February 2026</p>
+
+<!-- Summary -->
+<div class="summary-grid">
+  <div class="summary-card">
+    <div class="summary-num" style="color:var(--green);">~172</div>
+    <div class="summary-label">Public Files</div>
+  </div>
+  <div class="summary-card">
+    <div class="summary-num" style="color:var(--red);">~9,960</div>
+    <div class="summary-label">Private Files</div>
+  </div>
+  <div class="summary-card">
+    <div class="summary-num" style="color:var(--green);">~7 MB</div>
+    <div class="summary-label">Repo Size (est.)</div>
+  </div>
+</div>
+
+<!-- Visual bar -->
+<div class="bar-track">
+  <span class="bar-fill-green" style="width:2%;"></span><span class="bar-fill-amber" style="width:14%;"></span><span class="bar-fill-red" style="width:84%;"></span>
+</div>
+<div class="legend">
+  <span class="leg-green">Public (~172 files, ~7 MB)</span>
+  <span class="leg-amber">Not published (frame analysis &mdash; 19 files)</span>
+  <span class="leg-red">Private / gitignored (~9,960 files, ~4.2 GB)</span>
+</div>
+
+<!-- ===== PUBLIC ===== -->
+<h2>Public &mdash; Will Be Pushed</h2>
+
+<div class="card card-green">
+  <table>
+    <tr><th>Directory</th><th>Contents</th><th>Files</th><th>Size</th></tr>
+    <tr>
+      <td><code>/</code> (root)</td>
+      <td><code>.gitignore</code>, <code>README.md</code>, <code>PROJECT_REVIEW.html</code></td>
+      <td>3</td>
+      <td class="size">&lt;1 MB</td>
+    </tr>
+    <tr>
+      <td><code>code/original_R/</code></td>
+      <td>6 original R scripts as authored</td>
+      <td>6</td>
+      <td class="size">230 KB</td>
+    </tr>
+    <tr>
+      <td><code>code/R_verbose/</code></td>
+      <td>5 verbose commented R scripts</td>
+      <td>5</td>
+      <td class="size">178 KB</td>
+    </tr>
+    <tr>
+      <td><code>code/python_literal/</code></td>
+      <td>5 Python scripts + <code>requirements.txt</code></td>
+      <td>6</td>
+      <td class="size">162 KB</td>
+    </tr>
+    <tr>
+      <td><code>code/python_optimized/</code></td>
+      <td>8 Python modules + <code>requirements.txt</code></td>
+      <td>9</td>
+      <td class="size">80 KB</td>
+    </tr>
+    <tr>
+      <td><code>code/</code> (misc)</td>
+      <td><code>.Rhistory</code>, <code>.Rproj</code></td>
+      <td>2</td>
+      <td class="size">&lt;1 KB</td>
+    </tr>
+    <tr>
+      <td><code>data/metadata/</code></td>
+      <td>Topic terms, labels, STM matrices (16 CSV/TXT)</td>
+      <td>16</td>
+      <td class="size">124 KB</td>
+    </tr>
+    <tr>
+      <td><code>output/figures/topic_trends/</code></td>
+      <td>Topic proportion plots (all 70 topics)</td>
+      <td>80</td>
+      <td class="size">~14 MB</td>
+    </tr>
+    <tr>
+      <td><code>output/figures/word_clouds/</code></td>
+      <td>Word cloud PNGs</td>
+      <td>10</td>
+      <td class="size">~1 MB</td>
+    </tr>
+    <tr>
+      <td><code>output/figures/final/</code></td>
+      <td>Curated publication-ready outputs</td>
+      <td>18</td>
+      <td class="size">~3 MB</td>
+    </tr>
+    <tr>
+      <td><code>output/figures/sub_analyses/</code></td>
+      <td>Sleep &amp; Health / Sleep &amp; Work figures</td>
+      <td>20</td>
+      <td class="size">~2 MB</td>
+    </tr>
+    <tr>
+      <td><code>output/tables/</code></td>
+      <td>Result CSVs, per-topic docs, top articles</td>
+      <td>215</td>
+      <td class="size">5.5 MB</td>
+    </tr>
+    <tr style="background:var(--green-bg);">
+      <td colspan="2"><strong>Total Public</strong></td>
+      <td><strong>~172*</strong></td>
+      <td><strong>~7 MB</strong></td>
+    </tr>
+  </table>
+  <p style="font-size:0.78rem; color:var(--muted); margin-top:0.5rem;">* Excluding output/tables subdirectory files (frame_analysis labeled separately below). Table count includes 28 root CSVs + 142 all_topics_documents + 26 top_articles_by_topic.</p>
+</div>
+
+<!-- ===== NOT PUBLISHED ===== -->
+<h2>Not Published &mdash; Labeled, Kept Locally</h2>
+
+<div class="card card-amber">
+  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+    <strong><code>output/tables/frame_analysis/</code></strong>
+    <span class="badge b-amber">Not Published</span>
+  </div>
+  <p style="font-size:0.9rem;">19 files &mdash; Frame statistics, yearly/decade trends, correlations, co-occurrence matrices. These results are part of ongoing analysis and are <strong>not included in the current publication</strong>. They are tracked in git but should be understood as preliminary/supplementary work not yet peer-reviewed.</p>
+  <table>
+    <tr><td>Frame statistics &amp; prevalence</td><td>CSV</td></tr>
+    <tr><td>Yearly &amp; decade frame analysis</td><td>CSV</td></tr>
+    <tr><td>Temporal trend results</td><td>CSV</td></tr>
+    <tr><td>Frame correlation &amp; co-occurrence matrices</td><td>CSV</td></tr>
+    <tr><td>Topic-specific frame results</td><td>CSV</td></tr>
+  </table>
+</div>
+
+<!-- ===== PRIVATE ===== -->
+<h2>Private &mdash; Gitignored, Never Pushed</h2>
+
+<div class="card card-red">
+  <table>
+    <tr><th>Directory</th><th>Reason</th><th>Files</th><th>Size</th></tr>
+    <tr>
+      <td><code>manuscript/main/</code></td>
+      <td>Under review at HSSC &mdash; 8 drafts including DAPR submission</td>
+      <td>8</td>
+      <td class="size">~12 MB</td>
+    </tr>
+    <tr>
+      <td><code>manuscript/supplementary/</code></td>
+      <td>Cover letter, CRediT, highlights, title page, abstract</td>
+      <td>8</td>
+      <td class="size">~1 MB</td>
+    </tr>
+    <tr>
+      <td><code>manuscript/sub_analyses/</code></td>
+      <td>Sleep &amp; Health (Chung &amp; Moloney), Sleep &amp; Work (PNAS)</td>
+      <td>14</td>
+      <td class="size">~15 MB</td>
+    </tr>
+    <tr>
+      <td><code>output/figures/network_analysis/</code></td>
+      <td>Network centrality &amp; correlation figures</td>
+      <td>42</td>
+      <td class="size">~40 MB</td>
+    </tr>
+    <tr>
+      <td><code>output/figures/stm_networks/</code></td>
+      <td>Full STM network visualizations (EPS + PNG)</td>
+      <td>1,442</td>
+      <td class="size">~296 MB</td>
+    </tr>
+    <tr>
+      <td><code>data/processed/</code></td>
+      <td>R workspace snapshots (too large for GitHub)</td>
+      <td>4</td>
+      <td class="size">1.9 GB</td>
+    </tr>
+    <tr>
+      <td><code>data/raw/</code></td>
+      <td>Original ProQuest downloads (licensing)</td>
+      <td>0</td>
+      <td class="size">&mdash;</td>
+    </tr>
+    <tr>
+      <td><code>output/models/</code></td>
+      <td>STM model outputs + 8,443 extracted top documents</td>
+      <td>8,451</td>
+      <td class="size">38 MB</td>
+    </tr>
+    <tr>
+      <td><code>Social Construction.../</code></td>
+      <td>Original source folder (already reorganized)</td>
+      <td>~10,000+</td>
+      <td class="size">1.9 GB</td>
+    </tr>
+    <tr style="background:var(--red-bg);">
+      <td colspan="2"><strong>Total Private</strong></td>
+      <td><strong>~9,960+</strong></td>
+      <td><strong>~4.2 GB</strong></td>
+    </tr>
+  </table>
+</div>
+
+<!-- ===== .gitignore ===== -->
+<h2>Current <code>.gitignore</code></h2>
+
+<div class="card" style="background:var(--code-bg); font-family:'SF Mono',Consolas,monospace; font-size:0.82rem; line-height:1.8; white-space:pre;"># Large data files
+data/raw/
+data/processed/
+
+# Model objects
+output/models/
+
+# Manuscript files (private — under review)
+manuscript/
+
+# Network analysis figures
+output/figures/network_analysis/
+output/figures/stm_networks/
+
+# Original source folder (reorganized)
+Social Construction of Sleep Health and Medicine US Media/
+
+# R workspace
+.RData
+.Rhistory
+.Rproj.user/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS files
+.DS_Store
+Thumbs.db</div>
+
+<!-- ===== AUDIT NOTE ===== -->
+<h2>Audit Status</h2>
+<div class="card card-amber">
+  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+    <strong>Code Audit Required Before Public Release</strong>
+    <span class="badge b-amber">Pending</span>
+  </div>
+  <table>
+    <tr><th>Code Variant</th><th>What to Verify</th><th>Status</th></tr>
+    <tr>
+      <td><code>R_verbose/</code></td>
+      <td>Added comments accurately describe original logic; no code altered</td>
+      <td><span class="badge b-amber">Needs Review</span></td>
+    </tr>
+    <tr>
+      <td><code>python_literal/</code></td>
+      <td>STM approximations (FREX, Score, B-spline); gensim LDA params</td>
+      <td><span class="badge b-amber">Needs Review</span></td>
+    </tr>
+    <tr>
+      <td><code>python_optimized/</code></td>
+      <td>BERTopic integration; spaCy preprocessing; CLI pipeline end-to-end</td>
+      <td><span class="badge b-amber">Needs Review</span></td>
+    </tr>
+    <tr>
+      <td>All variants</td>
+      <td>Hardcoded paths removed; seed 8675309 consistent; package versions</td>
+      <td><span class="badge b-amber">Needs Review</span></td>
+    </tr>
+  </table>
+</div>
+
+<div class="footer">
+  Push Report &mdash; Generated February 2026<br>
+  Repository: <code>Sleep-Newspapers-TextMining</code> &mdash; create as <strong>private</strong>, switch to public after audit
+</div>
+
+</body>
+</html>

@@ -1,0 +1,210 @@
+Topic 1 :
+sleep, disord, apnea, peopl, medic, insomnia, center, problem, patient, caus 
+
+Topic 2 :
+game, hit, run, pitch, basebal, first, said, inning, two, manag 
+
+Topic 3 :
+will, saturday, friday, sunday, church, monday, thursday, tuesday, wednesday, march 
+
+Topic 4 :
+homeless, shelter, peopl, servic, help, volunt, program, center, famili, street 
+
+Topic 5 :
+store, mattress, bed, shop, buy, custom, sell, product, price, design 
+
+Topic 6 :
+anim, cat, human, adopt, bear, hunt, fox, will, put, food 
+
+Topic 7 :
+school, high, teacher, student, start, time, later, district, grade, teen 
+
+Topic 8 :
+counti, jail, prison, sheriff, offici, state, releas, facil, depart, supervisor 
+
+Topic 9 :
+babi, infant, parent, mother, birth, sleep, death, cri, month, child 
+
+Topic 10 :
+hotel, room, guest, inn, rate, stay, night, resort, suit, lodg 
+
+Topic 11 :
+room, can, design, use, space, pillow, wall, like, look, one 
+
+Topic 12 :
+game, point, play, said, score, second, first, team, shot, win 
+
+Topic 13 :
+flight, travel, airport, plane, airlin, fli, seat, passeng, jet, air 
+
+Topic 14 :
+michael, brown, jackson, told, gari, vega, las, jack, david, adam 
+
+Topic 15 :
+dream, life, one, mind, peopl, experi, way, can, sens, person 
+
+Topic 16 :
+music, song, band, perform, danc, record, play, sing, rock, album 
+
+Topic 17 :
+park, camp, summer, tent, day, week, can, cabin, state, outdoor 
+
+Topic 18 :
+dog, pet, owner, home, put, get, one, take, like, rescu 
+
+Topic 19 :
+drink, alcohol, smoke, coffe, can, caffein, avoid, cigarett, beer, milk 
+
+Topic 20 :
+presid, campaign, democrat, clinton, vote, elect, hous, senat, polit, candid 
+
+Topic 21 :
+money, fund, stock, year, market, bank, pay, price, invest, will 
+
+Topic 22 :
+king, goal, wilson, ice, brian, duck, mike, period, play, first 
+
+Topic 23 :
+street, black, peopl, man, block, neighborhood, gun, white, one, shoot 
+
+Topic 24 :
+show, news, call, will, phone, comput, televis, site, network, use 
+
+Topic 25 :
+won, world, win, sport, olymp, year, competit, team, will, athlet 
+
+Topic 26 :
+love, will, friend, husband, dear, want, know, tell, ask, letter 
+
+Topic 27 :
+drug, use, medic, effect, treatment, take, pill, patient, doctor, aid 
+
+Topic 28 :
+photo, illustr, caption, chicago, color, tribun, credit, graphic, text, sleep 
+
+Topic 29 :
+film, movi, play, star, show, actor, director, charact, theater, direct 
+
+Topic 30 :
+hous, home, fire, live, apart, build, move, neighbor, rent, resid 
+
+Topic 31 :
+island, water, boat, river, fish, mountain, sea, town, beach, lake 
+
+Topic 32 :
+percent, studi, risk, health, report, increas, peopl, year, found, american 
+
+Topic 33 :
+sleep, hour, get, day, time, work, nap, need, less, minut 
+
+Topic 34 :
+case, death, charg, kill, investig, murder, trial, victim, court, attorney 
+
+Topic 35 :
+race, run, ride, hors, mile, track, finish, day, start, last 
+
+Topic 36 :
+govern, nation, will, polit, countri, peopl, american, leader, now, organ 
+
+Topic 37 :
+can, may, problem, pain, depress, caus, stress, feel, often, mani 
+
+Topic 38 :
+travel, trip, tour, includ, cruis, guid, can, offer, vacat, per 
+
+Topic 39 :
+john, washington, william, robert, georg, paul, johnson, richard, charl, kennedi 
+
+Topic 40 :
+team, player, coach, season, play, game, said, footbal, year, last 
+
+Topic 41 :
+american, countri, cultur, world, state, unit, america, immigr, english, mani 
+
+Topic 42 :
+train, worker, work, union, crew, station, pilot, job, engin, safeti 
+
+Topic 43 :
+student, colleg, univers, program, class, senior, graduat, year, work, educ 
+
+Topic 44 :
+car, drive, driver, road, truck, stop, bus, traffic, vehicl, accid 
+
+Topic 45 :
+one, back, look, day, hand, like, walk, head, eye, around 
+
+Topic 46 :
+children, parent, child, kid, famili, girl, boy, -year-old, home, mother 
+
+Topic 47 :
+research, studi, brain, univers, test, found, scientist, hormon, may, scienc 
+
+Topic 48 :
+new, york, art, street, center, museum, manhattan, free, artist, paint 
+
+Topic 49 :
+night, sleep, bed, get, wake, fall, stay, asleep, room, bedtim 
+
+Topic 50 :
+war, bush, militari, armi, forc, soldier, report, command, attack, veteran 
+
+Topic 51 :
+say, peopl, get, today, work, dont, doesnt, theyr, add, usa 
+
+Topic 52 :
+citi, resid, new, council, will, offici, area, plan, mayor, communiti 
+
+Topic 53 :
+food, eat, cook, restaur, dinner, serv, lunch, wine, meal, bar 
+
+Topic 54 :
+hospit, medic, patient, doctor, care, health, cancer, center, nurs, call 
+
+Topic 55 :
+get, like, just, dont, think, know, want, thing, peopl, that 
+
+Topic 56 :
+light, time, day, clock, morn, shift, work, bodi, alarm, schedul 
+
+Topic 57 :
+angel, los, san, time, california, valley, francisco, diego, photograph, hill 
+
+Topic 58 :
+water, plant, cold, farm, winter, heat, tree, year, villag, weather 
+
+Topic 59 :
+counti, orang, santa, beach, regist, ana, christma, irvin, peopl, anaheim 
+
+Topic 60 :
+breath, nois, surgeri, snore, sound, can, devic, blood, use, heart 
+
+Topic 61 :
+compani, million, busi, year, new, execut, industri, manag, market, product 
+
+Topic 62 :
+club, play, round, open, green, golf, match, hole, year, tournament 
+
+Topic 63 :
+women, men, woman, sex, male, sexual, femal, man, one, era 
+
+Topic 64 :
+mark, miller, grant, howard, allen, larri, cooper, drew, tim, greg 
+
+Topic 65 :
+book, write, stori, one, read, writer, novel, world, publish, life 
+
+Topic 66 :
+famili, year, father, mother, son, home, work, day, friend, wife 
+
+Topic 67 :
+law, state, court, rule, legal, case, lawyer, feder, right, issu 
+
+Topic 68 :
+exercis, can, bodi, weight, eat, help, activ, get, diet, fit 
+
+Topic 69 :
+said, polic, offic, report, two, yesterday, offici, told, found, call 
+
+Topic 70 :
+smith, stephen, carolina, one, time, call, year, get, never, miss 
+

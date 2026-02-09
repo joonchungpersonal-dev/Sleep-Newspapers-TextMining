@@ -1,0 +1,57 @@
+# =============================================================================
+# Requirements for Python literal translation of R STM analysis scripts
+# =============================================================================
+# Project: Text Mining Sleep / Structural Topic Modeling
+# Author: Joon Chung (translation from R to Python)
+# =============================================================================
+
+# Core data manipulation (replaces tidyverse/dplyr)
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Topic modeling (replaces R stm package)
+# NOTE: There is no exact Python equivalent to R's STM package.
+# gensim provides LDA (not STM). For true STM, consider the 'stm' Python wrapper
+# or run R from Python via rpy2.
+gensim>=4.3.0
+scikit-learn>=1.3.0
+
+# Text processing (replaces quanteda, tidytext)
+nltk>=3.8.0
+spacy>=3.6.0
+
+# Visualization (replaces ggplot2, gridExtra)
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Word clouds (replaces wordcloud/ggwordcloud)
+wordcloud>=1.9.0
+
+# Network analysis (replaces igraph, ggraph)
+networkx>=3.1
+# Note: for network visualization we use matplotlib + networkx;
+# python-igraph is an alternative but networkx is more Pythonic
+
+# Correlation plots (replaces corrplot)
+# seaborn heatmap is used instead
+
+# Statistical modeling (replaces estimateEffect / b-spline)
+scipy>=1.11.0
+statsmodels>=0.14.0
+patsy>=0.5.3
+
+# Color palettes (replaces viridis, RColorBrewer)
+# matplotlib includes viridis; palettable provides additional palettes
+palettable>=3.3.0
+
+# Progress bars for batch processing
+tqdm>=4.65.0
+
+# For reading R .Rda/.RData files (optional, if loading R model objects)
+pyreadr>=0.5.0
+
+# For EPS output support in matplotlib
+# (matplotlib handles EPS natively via savefig)
+
+# Optional: run R code from Python if true STM is needed
+# rpy2>=3.5.0
