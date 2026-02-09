@@ -5,8 +5,11 @@ data/processed/
 # Model objects
 output/models/
 
-# Manuscript files (private — under review)
-manuscript/
+# Manuscript files (private — under review, except submitted version)
+manuscript/**
+!manuscript/
+!manuscript/main/
+!manuscript/main/DAPR*.docx
 
 # Network analysis figures (excluded from public repo)
 output/figures/network_analysis/
