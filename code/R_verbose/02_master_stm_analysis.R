@@ -191,7 +191,6 @@ library(ggwordcloud)
 # =============================================================================
 
 # Load full_text
-# load("C:/users/jchun/desktop/to do tomorrow/text/clean_full_text_20k.Rda")
 # NOTE: The load() call is commented out. The full_text_clean object must
 # already exist in your R environment (e.g., from a prior session or script).
 # load() restores R objects saved with save(). In Python, the equivalent would
@@ -312,7 +311,6 @@ topic_model_prev <- stm(out$documents,
                         verbose = TRUE,
                         init.type = "Spectral")
 #
-# # save(topic_model_prev, prep, file = "C:/users/jchun/desktop/to do tomorrow/Text mining sleep/Text mining sleep (7-25-18)/topic_model_prev.Rda")
 
 
 ###############################################################################

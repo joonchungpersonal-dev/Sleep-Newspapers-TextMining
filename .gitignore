@@ -11,6 +11,15 @@ manuscript/**
 !manuscript/main/
 !manuscript/main/DAPR*.docx
 
+# Copyrighted full-text newspaper articles (ProQuest licensing)
+output/tables/all_topics_documents/
+output/tables/top_articles_by_topic/
+output/tables/top_100_topic3_sleep_work.csv
+output/tables/my_topic3_analysis_full_data.csv
+output/tables/top_articles_*.csv
+output/figures/final/
+output/figures/sub_analyses/
+
 # Network analysis figures (excluded from public repo)
 output/figures/network_analysis/
 output/figures/stm_networks/

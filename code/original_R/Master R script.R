@@ -18,15 +18,6 @@ library(gridExtra)
 library(tidytext)
 library(ggwordcloud)
 
-# 
-# # Load full_text
-# # load("C:/users/jchun/desktop/to do tomorrow/text/clean_full_text_20k.Rda")
-# 
-# ## Remove any NA
-# full_text_subset <- full_text_clean %>% dplyr::select(text, text_id, datetime, Year) %>%
-#   na.omit()
-# full_text_subset$year <- as.numeric(full_text_subset$Year)
-# 
 # Processed
 processed <- textProcessor(full_text_subset$text, striphtml = TRUE, metadata = as.data.frame(full_text_subset))
 
@@ -44,8 +35,6 @@ topic_model_prev <- stm(out$documents,
                         K = 70,
                         verbose = TRUE,
                         init.type = "Spectral")
-# 
-# # save(topic_model_prev, prep, file = "C:/users/jchun/desktop/to do tomorrow/Text mining sleep/Text mining sleep (7-25-18)/topic_model_prev.Rda")
 
 ###################################################################################
 
@@ -78,7 +67,7 @@ stm_plot <- function(topic_select, title){
   # years
   years <- with(data, x) %>% as.numeric()
   plot_df <- data.frame(years = years, means = means, lower = lower, upper = upper)
-  plot_df <- plot_df %>% filter(years <= 2017) ######## !!!!!!!!!!
+  plot_df <- plot_df %>% filter(years <= 2017)
   
   # Plot
   topic_prop <- ggplot(plot_df, aes(x = years, y = means)) + geom_line() + 

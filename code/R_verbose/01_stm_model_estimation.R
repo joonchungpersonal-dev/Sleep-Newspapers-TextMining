@@ -97,7 +97,6 @@ library(ggwordcloud)
 
 #
 # # Load full_text
-# # load("C:/users/jchun/desktop/to do tomorrow/text/clean_full_text_20k.Rda")
 #
 # ## Remove any NA
 # full_text_subset <- full_text_clean %>% dplyr::select(text, text_id, datetime, Year) %>%
@@ -122,7 +121,6 @@ library(ggwordcloud)
 #                         verbose = TRUE,
 #                         init.type = "Spectral")
 #
-# # save(topic_model_prev, prep, file = "C:/users/jchun/desktop/to do tomorrow/Text mining sleep/Text mining sleep (7-25-18)/topic_model_prev.Rda")
 
 
 # =============================================================================
