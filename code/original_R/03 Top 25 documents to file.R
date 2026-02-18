@@ -1,5 +1,5 @@
 ## Joon Chung
-## jxc3388@miami.edu
+## Contact: see README
 
 ## 6/13/2025
 

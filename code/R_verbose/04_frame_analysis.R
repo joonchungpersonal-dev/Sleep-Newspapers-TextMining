@@ -9,7 +9,7 @@
 #           generates publication-quality visualizations.
 #
 # AUTHOR:   Joon Chung
-# EMAIL:    jxc3388@miami.edu
+# EMAIL:    Contact: see README
 # AFFIL:    The University of Miami, Miller School of Medicine
 #           The Department of Informatics and Health Data Science
 #

@@ -5,7 +5,7 @@ Literal Python translation of:
     "01 STM models 6_12_2025.R"
 
 Author: Joon Chung
-        jxc3388@miami.edu
+        Contact: see README
         The University of Miami, Miller School of Medicine
         The Department of Informatics and Health Data Science
 

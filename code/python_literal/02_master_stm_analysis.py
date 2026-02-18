@@ -8,7 +8,7 @@ Literal Python translation of:
     "Master R script.R" (original reference, 91KB)
 
 Author: Joon Chung
-        jxc3388@miami.edu
+        Contact: see README
         The University of Miami, Miller School of Medicine
         The Department of Informatics and Health Data Science
 
@@ -1755,7 +1755,7 @@ if __name__ == "__main__":
     print("MASTER STM ANALYSIS - Python Translation")
     print("=" * 80)
     print()
-    print("Author: Joon Chung, jxc3388@miami.edu")
+    print("Author: Joon Chung, Contact: see README")
     print("University of Miami, Miller School of Medicine")
     print()
     print("IMPORTANT: This script requires pre-loaded data.")
